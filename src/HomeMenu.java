@@ -1,6 +1,13 @@
+package src;
+
+import java.util.Scanner;
+
 public class HomeMenu
 {
-    private static void homeMenu() {
+
+    Scanner sc = new Scanner(System.in);
+
+    public void homeMenu() {
         boolean flag = true;
         while (flag) {
             System.out.println("\n********* SPLIT WISE ********");
@@ -9,14 +16,16 @@ public class HomeMenu
                     2 - Create Account
                     3 - Exit""");
             System.out.print("Choose Option : ");
-            Integer option = sc.nextInt();
+            int option = sc.nextInt();
             sc.nextLine();
             switch (option) {
                 case 1:
-                    login();
+                    Login login = new Login();
+                    login.login();
                     break;
                 case 2:
-                    signUp();
+                    SignUp signUp = new SignUp();
+                    signUp.signUp();
                     break;
                 case 3:
                     flag = false;
