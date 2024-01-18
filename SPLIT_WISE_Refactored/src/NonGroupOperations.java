@@ -3,11 +3,14 @@ package src;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class NonGroupOperations
+public class NonGroupOperations implements IExpenses
 {
     private final User currentUser;
     private final Scanner sc = new Scanner(System.in);
     ArrayList<User> users;
+
+    int myAmount = 0;
+    int friendAmount = 0;
 
     public NonGroupOperations(User user)
     {
@@ -15,7 +18,7 @@ public class NonGroupOperations
         this.users = Main.users;
     }
 
-    public void nonGroupAddExpenses() {
+    public void addExpenses() {
         if (currentUser.commonFriends.isEmpty()) {
             System.out.println("\tPlease Add Friends To Continue");
             UserMenu userMenu = new UserMenu(currentUser);
@@ -46,18 +49,16 @@ public class NonGroupOperations
         int adjustSplit = sc.nextInt();
         sc.nextLine();
 
-        int myAmt = 0;
-        int friendAmt = 0;
         if (adjustSplit == 1) {
             System.out.print("Me ₹: ");
-            myAmt = sc.nextInt();
+            myAmount = sc.nextInt();
             sc.nextLine();
             System.out.print(friendObj.name + " ₹: ");
-            friendAmt = sc.nextInt();
+            friendAmount = sc.nextInt();
             sc.nextLine();
         } else {
-            myAmt = totAmt / 2;
-            friendAmt = totAmt / 2;
+            myAmount = totAmt / 2;
+            friendAmount = totAmt / 2;
         }
 
         String whoPaid;
@@ -65,16 +66,16 @@ public class NonGroupOperations
         else whoPaid = friendObj.name;
 
         //Add Expenses in Current User Account
-        currentUser.commonExpenses.add(new Expenses(friendObj.name, des, whoPaid, myAmt, friendAmt, totAmt));
+        currentUser.commonExpenses.add(new Expenses(friendObj.name, des, whoPaid, myAmount, friendAmount, totAmt));
 
         if (whoPaid.equals("You")) whoPaid = friendObj.name;
         else whoPaid = "You";
-        friendObj.commonExpenses.add(new Expenses(currentUser.name, des, whoPaid, friendAmt, myAmt, totAmt));
+        friendObj.commonExpenses.add(new Expenses(currentUser.name, des, whoPaid, friendAmount, myAmount, totAmt));
         System.out.println("\tExpenses Added Successfully");
     }
 
     // Non-Group balances
-    public void nonGroupBalances() {
+    public void balances() {
         if (currentUser.commonExpenses.isEmpty()) {
             System.out.println("\tN/A");
             return;
@@ -100,7 +101,7 @@ public class NonGroupOperations
             nonGroupDeleteExpenses(expense);
         } else if (option != 1) {
             System.out.println("\tInvalid Option");
-            nonGroupBalances();
+            balances();
         }
     }
 

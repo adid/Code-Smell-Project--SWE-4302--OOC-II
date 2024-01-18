@@ -31,10 +31,10 @@ public class GroupExpenses
             sc.nextLine();
             switch (option) {
                 case 1:
-                    groupOperations.groupAddExpenses();
+                    groupOperations.addExpenses();
                     break;
                 case 2:
-                    groupOperations.groupBalances();
+                    groupOperations.balances();
                     break;
                 case 3:
                     groupOperations.groupFriends();

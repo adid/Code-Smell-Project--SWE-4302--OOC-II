@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fe2d7d8f-e2d3-4025-97b0-6d9ee217a23f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/SPLIT_WISE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/Expenses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/GroupExpenses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/GroupOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/HomeMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/ManageFriends.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/NonGroupExpenses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/NonGroupOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/SignUp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPLIT_WISE/src/UserMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expenses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GroupExpenses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GroupOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HomeMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManageFriends.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NonGroupExpenses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NonGroupOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SignUp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenu.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ayY3Ioed2GLDZixHvHjtVAunHK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Study/Semester 3, Winter 2023/SWE 4302 Lab  Object Oriented Concepts II/Code-Smell-Project-OOC-II/SPLIT_WISE_Refactored",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="aircompany" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="aircompany" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe2d7d8f-e2d3-4025-97b0-6d9ee217a23f" name="Changes" comment="" />
+      <created>1705292084630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705292084630</updated>
+      <workItem from="1705292085660" duration="436000" />
+      <workItem from="1705320624990" duration="1074000" />
+      <workItem from="1705325129720" duration="6840000" />
+      <workItem from="1705379985304" duration="434000" />
+      <workItem from="1705593867531" duration="4265000" />
+      <workItem from="1705615573405" duration="34000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

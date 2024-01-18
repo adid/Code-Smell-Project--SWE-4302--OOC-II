@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class GroupOperations
+public class GroupOperations implements IExpenses
 {
     private final User currentUser;
     private final Scanner sc = new Scanner(System.in);
     ArrayList<User> users;
+    int myAmount = 0;
 
     public GroupOperations(User user)
     {
@@ -16,24 +17,30 @@ public class GroupOperations
         this.users = Main.users;
     }
 
-    public void groupAddExpenses() {
+    public void addExpenses() {
         if (currentUser.groupFriends.isEmpty()) {
             System.out.println("\tAdd Friends In Group");
             return;
         }
         System.out.println("\n******** Add Expenses ********");
 
-        //Choose Friends
+        // Choose Friends
         System.out.println("With me and : ");
-        for (int i = 0; i < currentUser.groupFriends.size(); i++)
+        for (int i = 0; i < currentUser.groupFriends.size(); i++) {
             System.out.println((i + 1) + ". " + currentUser.groupFriends.get(i).name);
-        System.out.print("Select Friends : ");
-        String position = sc.nextLine();
-        String[] fp = position.split(",");
+        }
 
-        int[] friendsPosition = new int[fp.length];
-        for (int i = 0; i < fp.length; i++)
-            friendsPosition[i] = Integer.parseInt(fp[i]) - 1;
+        System.out.print("Select Friends (comma-separated): ");
+        String positionInput = sc.nextLine();
+        String[] selectedPositions = positionInput.split(",");
+
+        int[] friendsPositions = new int[selectedPositions.length];
+        for (int i = 0; i < selectedPositions.length; i++) {
+            friendsPositions[i] = Integer.parseInt(selectedPositions[i].trim()) - 1;
+        }
+
+// Now you can use 'friendsPositions' array to refer to the selected friends
+
 
         //Expenses Details
         System.out.println("\n******* Expense details *******");
@@ -46,7 +53,7 @@ public class GroupOperations
 
         //Who-Paid
         System.out.print("Paid by (0)You");
-        for (int i = 0; i < friendsPosition.length; i++)
+        for (int i = 0; i < friendsPositions.length; i++)
             System.out.print(" / (" + (i + 1) + ")" + currentUser.groupFriends.get(i).name);
         System.out.print(" : ");
         int wp = sc.nextInt() - 1;
@@ -59,20 +66,17 @@ public class GroupOperations
         System.out.print("Split (0)Equally / (1)Unequally : ");
         int split = sc.nextInt();
         sc.nextLine();
-        int myAmt = 0;
 
         if (split == 0) {
-            myAmt = totAmt / (currentUser.groupFriends.size() + 1);
+            myAmount = totAmt / (currentUser.groupFriends.size() + 1);
 
-            ArrayList<Expenses> grpExp = new ArrayList<>(List.of(new Expenses(currentUser.name, des, whoPaid, myAmt, myAmt, totAmt)));
+            ArrayList<Expenses> grpExp = new ArrayList<>(List.of(new Expenses(currentUser.name, des, whoPaid, myAmount, myAmount, totAmt)));
 
             for (int i = 0; i < currentUser.groupFriends.size(); i++) {
                 int friendAmt = totAmt / (currentUser.groupFriends.size() + 1);
-                grpExp.add(new Expenses(currentUser.groupFriends.get(i).name, des, whoPaid, friendAmt, myAmt, totAmt));
+                grpExp.add(new Expenses(currentUser.groupFriends.get(i).name, des, whoPaid, friendAmt, myAmount, totAmt));
             }
             currentUser.groupExpenses.add(grpExp);
-        } else {
-
         }
 
         //Add Expense To Friends obj
@@ -87,7 +91,7 @@ public class GroupOperations
     }
 
     // Group-Balances
-    public void groupBalances() {
+    public void balances() {
         if (currentUser.groupExpenses.isEmpty()) {
             System.out.println("\tN/A");
             return;
@@ -104,12 +108,12 @@ public class GroupOperations
             System.out.println("\t" + (i + 1) + ". " + des + " :-");
             System.out.print("\t\t" + whoPaid + " paid ₹" + crtExp.get(0).totalAmount + " for " + des);
 
-            for (int j = 0; j < crtExp.size(); j++)
-                if (!crtExp.get(0).whoPaid.equals(crtExp.get(j).friendName)) {
+            for (Expenses expenses : crtExp)
+                if (!crtExp.get(0).whoPaid.equals(expenses.friendName)) {
                     String name;
-                    if (currentUser.name.equals(crtExp.get(j).friendName)) name = "You";
-                    else name = crtExp.get(j).friendName;
-                    System.out.print(" " + name + " owes ₹" + crtExp.get(j).myAmount + " &");
+                    if (currentUser.name.equals(expenses.friendName)) name = "You";
+                    else name = expenses.friendName;
+                    System.out.print(" " + name + " owes ₹" + expenses.myAmount + " &");
                 }
         }
     }

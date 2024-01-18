@@ -24,10 +24,10 @@ public class NonGroupExpenses
             int option = sc.nextInt();
             switch (option) {
                 case 1:
-                    nonGroupOperations.nonGroupAddExpenses();
+                    nonGroupOperations.addExpenses();
                     break;
                 case 2:
-                    nonGroupOperations.nonGroupBalances();
+                    nonGroupOperations.balances();
                     break;
                 case 3:
                     flag = false;
